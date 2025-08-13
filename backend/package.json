@@ -5,9 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "nodemon index.js" ,
-    "build": "npm install && npm install --prefix client && npm run build --prefix client",
-    "postinstall": "npm --prefix client install && npm --prefix client run build"
+    "dev": "nodemon index.js" 
 
   },
   "keywords": [],
