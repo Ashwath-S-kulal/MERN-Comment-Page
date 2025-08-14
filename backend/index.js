@@ -9,7 +9,6 @@ app.use(cors());
 
 
 
-const PORT = process.env.PORT || 3000;
 const MONGODB_URI =
   process.env.MONGODB_URI || 'mongodb://localhost:27017/project_comments';
 
@@ -48,6 +47,7 @@ app.get(/^\/(?!api\/).*/, (req, res) => {
 
 
 //  Start server 
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`🚀 Server listening on http://localhost:${PORT}`);
+  console.log(`Server listening on http://localhost:${PORT}`);
 });
