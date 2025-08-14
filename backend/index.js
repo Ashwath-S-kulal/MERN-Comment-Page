@@ -3,6 +3,8 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const serverless = require('serverless-http');
+
 
 const app = express();
 app.use(cors()); 
@@ -51,3 +53,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
 });
+
+module.exports = serverless(app);
