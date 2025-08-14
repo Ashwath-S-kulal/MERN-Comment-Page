@@ -5,8 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "build": "echo 'No build step needed'"
-
+    "start": "react-scripts start",
+    "build": "react-scripts build" 
   },
   "keywords": [],
   "author": "",
