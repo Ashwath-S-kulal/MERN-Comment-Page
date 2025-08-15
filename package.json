@@ -9,7 +9,7 @@
   "devDependencies": {
     "dev": "nodemon backend/index.js",
     "start": "node backend/index.js",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "build": "cd frontend && npm install && npm run build && cd ../backend && npm install",
     "postinstall": "npm --prefix frontend install && npm --prefix frontend run build"
   },
   "scripts": {
