@@ -38,7 +38,7 @@ app.get('/api/health', (req, res) => {
 
 
 //  Serve frontend 
-app.use(express.static(path.join(__dirname, 'frontend/build')));
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 
 //  Fallback to index.html for React Router 
