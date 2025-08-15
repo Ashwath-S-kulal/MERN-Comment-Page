@@ -38,14 +38,13 @@ app.get('/api/health', (req, res) => {
 
 
 //  Serve frontend 
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'frontend/build')));
 
 
 //  Fallback to index.html for React Router 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+app.get(/^\/(?!api\/).*/, (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
 });
-
 
 
 //  Start server 
