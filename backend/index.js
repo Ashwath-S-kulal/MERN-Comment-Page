@@ -37,14 +37,14 @@ app.get('/api/health', (req, res) => {
 });
 
 
-//  Serve frontend 
-app.use(express.static(path.join(__dirname, '../frontend/build')));
+// Serve frontend (Vite output folder is "dist")
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
-
-//  Fallback to index.html for React Router 
+// Fallback to index.html for React Router
 app.get(/^\/(?!api\/).*/, (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
 });
+
 
 
 
